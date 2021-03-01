@@ -1,0 +1,9 @@
+.newsfeed{
+    background-color: orange;
+    flex: 0.7;
+}
+
+.stats{
+    background-color: red;
+    flex: 0.3;
+}
