@@ -5,24 +5,6 @@ import './LineGraph.css'
 function LineGraph() {
     const [graphData, setGraphData] = useState([])
     
-    const data = [
-    {
-      x: 10,
-      y: 20,
-    },
-    {
-      x: 20,
-      y: 10,
-    },
-    {
-      x: 12,
-      y: 4,
-    },
-    {
-      x: 1,
-      y: 24,
-    },
-  ];
 
   const createMockData = () => {
       let data= [];
@@ -74,7 +56,7 @@ function LineGraph() {
                 {
                   type: "time",
                   time: {
-                    format: "MM/DD/YY",
+                    parser: "MM/DD/YY",
                     tooltipFormat: "ll",
                   },
                   ticks: {
