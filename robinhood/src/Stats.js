@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Stats.css'
 import axios from 'axios'
 import StatsRow from './StatsRow'
+import {db} from './firebase'
 
 const KEY_URL = 'c1359p748v6rj20a8opg'
 const BASE_URL = 'https://finnhub.io/api/v1/quote'
@@ -10,6 +11,7 @@ function Stats() {
 
     const [stockData, setStockData] = useState([]);
 
+    const [myStocks, setmyStocks] = useState([])
 
     const getStocksData = (stock) => {
         return axios
@@ -62,10 +64,10 @@ function Stats() {
                     <div className="stats__rows">
                         {stockData.map((stock) => (
                             <StatsRow 
-                                // key={stock.name}
-                                // name={stock.name}
-                                // openPrice={stock.o}
-                                // price={stock.c}
+                                key={stock.name}
+                                name={stock.name}
+                                openPrice={stock.o}
+                                price={stock.c}
                             />
                         ))}
                     </div>

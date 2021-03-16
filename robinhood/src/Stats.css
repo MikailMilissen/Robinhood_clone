@@ -1,5 +1,4 @@
 .stats{
-
     display: flex;
     flex: 0.3;
     flex-shrink: 0;
@@ -10,6 +9,7 @@
 .stats__container{
     flex-direction: column;
     flex: 1;
+    height: 105%;
     background-color: #1E2023;
     border-radius: 5px;
     border: 1px solid #42494D;
@@ -24,3 +24,4 @@
     padding: 20px 20px 10px 20px;
     font-weight: 500;
 }
+
